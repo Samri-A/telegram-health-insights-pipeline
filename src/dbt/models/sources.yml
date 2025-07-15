@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: Raw               
+    schema: Raw              
+    tables:
+      - name: raw_telegram_message_data
+      - name : raw_image_detection

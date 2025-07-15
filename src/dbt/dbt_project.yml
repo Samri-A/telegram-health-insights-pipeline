@@ -1,0 +1,13 @@
+name: telegram_health_insights_pipeline
+version: '1.0'
+config-version: 2
+
+profile: Medical_analysis
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  telegram_health_insights_pipeline:
+    +materialized: view

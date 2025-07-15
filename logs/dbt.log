@@ -1,0 +1,31 @@
+[0m21:54:44.551368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B1884AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B28CBD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B28CB9D0>]}
+
+
+============================== 21:54:44.562099 | 0ab1f0d0-52b3-48a9-be8b-f513d6d53061 ==============================
+[0m21:54:44.562099 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:54:44.563114 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\HP\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:54:44.633850 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\HP\.dbt
+[0m21:55:56.441765 [error] [MainThread]: Encountered an error:
+
+[0m21:55:56.450444 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\dbt\task\init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\dbt\task\init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\HP\OneDrive\Desktop\Tenx\telegram-health-insights-pipeline\env\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:55:56.454583 [debug] [MainThread]: Command `dbt init` failed at 21:55:56.454167 after 72.08 seconds
+[0m21:55:56.455595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B3A09810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B3A45370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166B3945260>]}
+[0m21:55:56.456520 [debug] [MainThread]: Flushing usage events
+[0m21:56:02.050312 [debug] [MainThread]: An error was encountered while trying to flush usage events
